@@ -1,0 +1,51 @@
+.movieGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+.pageContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie {
+    display: flex;
+    height: 400px;
+    background-color: antiquewhite;
+    border-radius: 1em;
+}
+
+.movie img {
+    width: 50%;
+    margin-right: 0.5em;
+}
+
+.movie img, .movie div {
+    flex: 1
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h1 {
+    flex: 1;
+    margin: 0;
+}
+
+.info p {
+    flex: 3
+}
+
+.info h1, .info p {
+    overflow: hidden;
+}
+
+@media screen and (max-width:900px) {
+    .movieGrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
